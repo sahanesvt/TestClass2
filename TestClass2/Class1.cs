@@ -17,20 +17,22 @@ namespace TestClass2
 
     public class Square : Shape
     {
+        private double _width = 0;
+
         public double Width
-        { get { return Width; }
+        { get { return _width; }
           set
             {
-                Width = value;
-                calcProperties(Width);
+                _width = value;
+                calcProperties(_width);
             }
         }
 
         public Square() { }
         public Square(double width)
         {
-            Width = width;
-            calcProperties(Width);
+            _width = width;
+            calcProperties(_width);
         }
 
         private void area(double width)
@@ -52,20 +54,22 @@ namespace TestClass2
 
     public class Circle : Shape
     {
+        private double _radius = 0;
+
         public double Radius
         {
-            get { return Radius; }
+            get { return _radius; }
             set
             {
-                Radius = value;
-                calcProperties(Radius);
+                _radius = value;
+                calcProperties(_radius);
             }
         }
 
         public Circle() { }
         public Circle(double radius)
         {
-            Radius = radius;
+            _radius = radius;
             calcProperties(Radius);
         }
 
